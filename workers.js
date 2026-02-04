@@ -7,12 +7,12 @@ const HTML_CONTENT = `
     <title>Card Tab</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>⭐</text></svg>">
     <style>
-    /* 全局样式 */
+    /* 全局样式 修改了背景颜色 */
     body {
         font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f8f6f2; /* 米白色背景 */
+        background-color: #F5EFEF; /* 修改背景颜色 */
         color: #222; /* 深灰字体 */
         transition: all 0.3s ease;
     }
@@ -23,13 +23,13 @@ const HTML_CONTENT = `
         color: #e3e3e3;
     }
 
-    /* 固定元素样式 */
+    /* 固定元素样式 修改了标头颜色 */
     .fixed-elements {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        background-color: #f8f6f2; /* 与整体背景一致 */
+        background: linear-gradient(to bottom, #092140, #537895); /* 修改标头颜色 */
         z-index: 1000;
         padding: 10px;
         transition: all 0.3s ease;
@@ -110,6 +110,7 @@ const HTML_CONTENT = `
     }
 
     /* 一言模块样式 */
+/*
     #hitokoto {
         margin: 5px 0 15px;
         font-size: 14px;
@@ -138,7 +139,7 @@ const HTML_CONTENT = `
     body.dark-theme #hitokoto a {
         color: #5d7fb9;
     }
-
+*/
     /* 中心内容样式 */
     .center-content {
         position: absolute;
@@ -1120,9 +1121,8 @@ const HTML_CONTENT = `
 
 
 
-
-
     /* 版权信息样式 */
+/*
     #copyright {
         position: fixed;
         bottom: 0;
@@ -1181,7 +1181,7 @@ const HTML_CONTENT = `
     body.dark-theme #copyright a:after {
         background-color: #5d7fb9;
     }
-
+*/
     /* ========== 天气组件样式 ========== */
     .weather-mini {
         display: inline-flex;
@@ -2012,10 +2012,12 @@ const HTML_CONTENT = `
         <h3><span class="weather-mini" id="weather-mini" onclick="openWeatherModal()"><span class="weather-loading">加载中...</span></span></h3>
         <div class="center-content">
             <!-- 一言模块 -->
+<!--
             <p id="hitokoto">
                 <a href="#" id="hitokoto_text"></a>
             </p>
             <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+-->
             <!-- 搜索栏 -->
             <div class="search-container">
                 <div class="search-bar">
@@ -3420,7 +3422,7 @@ const HTML_CONTENT = `
 
     // 打开GitHub仓库
     function openGitHub() {
-        window.open('https://github.com/hmhm2022/Card-Tab', '_blank');
+        window.open('https://github.com/zht98/Card-Tab', '_blank');
         logAction('访问GitHub仓库');
     }
 
